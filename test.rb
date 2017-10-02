@@ -51,7 +51,7 @@ describe 'methods_quiz' do
 			closer_to(18, 100, 12).must_equal(12)
 		end
 		it 'same distance from guess' do
-			closer_to(1, 11, -9).must_equal(0)
+			closer_to(2, 12, -10).must_equal(0)
 		end
 	end
 end

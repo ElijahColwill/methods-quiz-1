@@ -22,4 +22,18 @@ end
 
 # TODO - write closer_to
 
+def closer_to(target, guess_1, guess_2)
+	if guess_1 < 0
+		guess_1 = guess_1.abs + 2
+	elsif guess_2 < 0
+		guess_2 = guess_2.abs + 2
+	end
+	if guess_1.abs - target.abs < guess_2.abs - target.abs
+		return guess_1 
+	elsif guess_1.abs - target.abs == guess_2.abs - target.abs
+		return 0
+	end
+	return guess_2
+end
+
 # TODO - write two_as_one?
