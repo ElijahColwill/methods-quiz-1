@@ -43,4 +43,15 @@ describe 'methods_quiz' do
 			icy_hot?(112, -16).must_equal(true)
 		end
 	end
+	describe 'closer_to' do
+		it 'first guess is closer' do
+			closer_to(12, 18, 86).must_equal(18)
+		end
+		it 'second guess is closer' do
+			closer_to(18, 100, 12).must_equal(12)
+		end
+		it 'same distance from guess' do
+			closer_to(1, 11, -9).must_equal(0)
+		end
+	end
 end
