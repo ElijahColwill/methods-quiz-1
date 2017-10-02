@@ -29,4 +29,18 @@ describe 'methods_quiz' do
 			not_string("notcool").must_equal("notcool")
 		end
 	end
+	describe 'icy_hot?' do
+		it 'neither' do
+			icy_hot?(21, 86).must_equal(false)
+		end
+		it 'just icy' do
+			icy_hot?(-10, 12).must_equal(false)
+		end
+		it 'just hot' do
+			icy_hot?(188, 66).must_equal(false)
+		end
+		it 'both (return true)' do
+			icy_hot?(112, -16).must_equal(false)
+		end
+	end
 end
