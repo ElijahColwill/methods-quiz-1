@@ -18,4 +18,15 @@ describe 'methods_quiz' do
 			has_teen?(13, 14, 17).must_equal(true)
 		end
 	end
+	describe 'not_string' do
+		it 'add not to front' do
+			not_string("hello").must_equal("nothello")
+		end
+		it 'empty string' do
+			not_string("").must_equal("not")
+		end
+		it 'return unchanged' do
+			not_string("notcool").must_equal("notcool")
+		end
+	end
 end
