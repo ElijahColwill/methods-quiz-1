@@ -40,7 +40,7 @@ describe 'methods_quiz' do
 			icy_hot?(188, 66).must_equal(false)
 		end
 		it 'both (return true)' do
-			icy_hot?(112, -16).must_equal(false)
+			icy_hot?(112, -16).must_equal(true)
 		end
 	end
 end
