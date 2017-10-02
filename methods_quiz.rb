@@ -37,3 +37,10 @@ def closer_to(target, guess_1, guess_2)
 end
 
 # TODO - write two_as_one?
+
+def two_as_one?(a, b, c)
+	ab = a.abs + b.abs
+	bc = b.abs + c.abs
+	ac = a.abs + c.abs
+	return ab == c.abs || bc == a.abs || ac == b.abs
+end
