@@ -54,4 +54,15 @@ describe 'methods_quiz' do
 			closer_to(2, 12, -10).must_equal(0)
 		end
 	end
+	describe 'two_as_one?' do
+		it 'possible' do
+			two_as_one?(12, 6, 18).must_equal(true)
+		end
+		it 'not possible' do
+			two_as_one?(18, 100, 12).must_equal(false)
+		end
+		it 'possible with negatives' do
+			two_as_one?(-22, -12, -10).must_equal(true)
+		end
+	end
 end
