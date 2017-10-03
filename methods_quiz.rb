@@ -23,17 +23,15 @@ end
 # TODO - write closer_to
 
 def closer_to(target, guess_1, guess_2)
-	if guess_1 < 0
-		guess_1 = guess_1.abs + 2
-	elsif guess_2 < 0
-		guess_2 = guess_2.abs + 2
-	end
-	if guess_1.abs - target.abs < guess_2.abs - target.abs
-		return guess_1 
-	elsif guess_1.abs - target.abs == guess_2.abs - target.abs
+	distance_a = (target - guess_1).abs
+	distance_b = (target - guess_2).abs
+	if distance_b == distance_a
 		return 0
 	end
-	return guess_2
+	if distance_a > distance_b
+		return guess_2
+	end
+	return guess_1
 end
 
 # TODO - write two_as_one?
